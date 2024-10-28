@@ -1,0 +1,28 @@
+/* toastStyles.css */
+
+/* General toast styling */
+.Toastify__toast {
+    background-color: white !important; /* Set the background color to white */
+    border: 2px solid #8968e6 !important;  /* Set the border color and width */
+    color: black;   
+    font-size: small;
+  }
+  
+  /* Error toast specific styling */
+  .Toastify__toast--error {
+    color: black; /* Optional: change text color for better visibility */
+  }
+  
+  /* Progress bar color */
+  .Toastify__progress-bar {
+    background-color: #8968e6 !important; /* Set the progress bar color to blue */
+  }
+
+  .Toastify__progress-bar--wrp {
+    background-color: #ffffff !important; /* Set the progress bar color to blue */
+  }
+
+  .Toastify__close-button {
+    width: 7px;
+  }
+  

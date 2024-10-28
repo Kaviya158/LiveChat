@@ -35,7 +35,7 @@ input{
     padding: 0.5rem;
     border: 0.1rem solid #ccc8d6;
     border-radius: 0.4rem;
-    color: white;
+    color: rgb(131, 128, 128);
     width: 100%;
     font-size: 1rem;
     &:focus {
