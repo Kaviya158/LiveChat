@@ -1,0 +1,71 @@
+.FormContainer{
+    background-color:aliceblue;
+    height:100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.brand{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoDesign{
+    height: 2rem;
+    width: 2rem;
+}
+.chatName{
+    color: rgb(19, 73, 117);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    gap:2rem;
+    background-color: rgb(234, 241, 248);
+    padding:3rem 2rem;
+    border-radius: 2rem;
+}
+
+input{
+    background-color: transparent;
+    padding: 0.5rem;
+    border: 0.1rem solid #ccc8d6;
+    border-radius: 0.4rem;
+    color: white;
+    width: 100%;
+    font-size: 1rem;
+    &:focus {
+        border: 0.1rem solid #997af0;
+        outline: none;
+      }
+}
+
+button{
+    background-color: #8968e6;
+    padding:0.5rem;
+    border: 0.1rem solid #ccc8d6;
+    border-radius: 0.4rem;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    &:hover {
+      background-color: #ccc8d6;
+    }
+}
+
+span {
+    color: rgb(102, 95, 95);
+    text-transform: uppercase;
+    a {
+      color: #4e0eff;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  }
