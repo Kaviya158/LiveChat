@@ -20,7 +20,6 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (handleValidation()) {
-      console.log("in validation",registerRoute);
       
       const { username, email, password } = values; // Ensure variable name is correct
       const { data } = await axios.post(registerRoute, {
@@ -28,13 +27,11 @@ const Register = () => {
         email,
         password,
       });
-      console.log("data",data);
       
       if(data.status===false)
       {
         toast.error(data.msg, toastOptions);
       }
-      console.log("data.status",data.status);
       
       if(data.status===true)
       {
