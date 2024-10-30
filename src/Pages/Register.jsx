@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import "./Register.css";
+import {useNavigate} from "react-router-dom";
 import logo from "../assests/logo.svg";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -15,16 +16,34 @@ const Register = () => {
     password: "",
     confirmpassword: "",
   });
+  const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (handleValidation()) {
-      const { username, email, password, confirmpassword } = values; // Ensure variable name is correct
+      console.log("in validation",registerRoute);
+      
+      const { username, email, password } = values; // Ensure variable name is correct
       const { data } = await axios.post(registerRoute, {
         username,
         email,
         password,
       });
+      console.log("data",data);
+      
+      if(data.status===false)
+      {
+        toast.error(data.msg, toastOptions);
+      }
+      console.log("data.status",data.status);
+      
+      if(data.status===true)
+      {
+        localStorage.setItem('chat-app-user',JSON.stringify(data.user));
+        navigate("/");
+      }
+      
     }
+
   };
   const handleChange = (event) => {
     setValues({ ...values, [event.target.name]: event.target.value });
