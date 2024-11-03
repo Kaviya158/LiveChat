@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import "./Register.css";
 import {useNavigate} from "react-router-dom";
@@ -17,6 +17,13 @@ const Register = () => {
     confirmpassword: "",
   });
   const navigate = useNavigate();
+
+  useEffect(()=>{
+    if(localStorage.getItem('chat-app-user'))
+    {
+      navigate("/");
+    }
+  },[])
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (handleValidation()) {
